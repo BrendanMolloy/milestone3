@@ -1,13 +1,26 @@
-<html>
-    <head>
+{% extends 'base.html' %}
+{% block content %}
 
-    </head>
-    <body>
-        {% for potato in potatoes %}
-            {{potato.title}}
-            {{potato.rating}}
-            {{potato.image_url}}
-            {{potato.comment}}
-        {% endfor %}
-    </body>
-</html>
+    <div class="row">
+    {% for potato in potatoes %}
+      <div class="col s12 m4">
+        <div class="card">
+
+        <!--{{potato.title}}
+        {{potato.rating}}
+        {{potato.image_url}}
+        {{potato.comment}}-->
+
+          <div class="card-image">
+            <img src="{{potato.image_url}}">
+            <span class="card-title">{{potato.title}}</span>
+          </div>
+          <div class="card-action">
+            <a href="#">Rate this Potato</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+{% endblock %}
