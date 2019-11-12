@@ -16,7 +16,7 @@
             <span class="card-title">{{potato.title}}</span>
           </div>
           <div class="card-action">
-            <a href="#">Rate this Potato</a>
+            <a href="{{url_for('profile', potato_id=potato._id)}}">Rate this Potato</a>
           </div>
         </div>
       </div>

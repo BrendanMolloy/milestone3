@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-lg-6">
+			<h1>{{potato.title}}</h1>
+			<p>{{potato.rating}}</p>
+		</div>
+		<div class="col-md-6 col-lg-6">
+			<img class="potato_image" src="{{potato.image_url}}">
+        </div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-lg-6">
+			<p>{{potato.comment}}</p>
+		</div>
+		<div class="col-md-6 col-lg-6">
+		</div>
+	</div>
+</div>
+	{% endblock %}
